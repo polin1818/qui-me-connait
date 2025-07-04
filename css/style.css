@@ -1,0 +1,111 @@
+/* ✅ Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* ✅ Conteneur */
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    animation: float 2.5s ease-in-out infinite;
+}
+
+/* ✅ Animation machine à écrire sur span */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    animation: typing 4s steps(45, end), blink-caret 0.75s step-end infinite;
+    max-width: 100%;
+    font-size: 2rem;
+}
+
+/* ✅ Paragraphe */
+p {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+/* ✅ Footer */
+footer {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 35px;
+}
+
+/* ✅ Bouton */
+.btn {
+    padding: 18px 36px;
+    font-size: 1.2em;
+    background-color: #00c9a7;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00b38f;
+}
+
+/* ✅ Animation de flottement */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ✅ Animation machine à écrire */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+/* ✅ Responsive mobile */
+@media screen and (max-width: 600px) {
+    .typewriter {
+        font-size: 1.2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 4s steps(35, end), blink-caret 0.75s step-end infinite;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 16px;
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 30px;
+    }
+}
